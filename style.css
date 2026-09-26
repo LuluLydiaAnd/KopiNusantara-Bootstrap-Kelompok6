@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-light: #f9f6f0;
+    --bg-card: #f1ebd9;
+    --text-dark: #3e2723;
+    --text-gray: #6d4c41;
+    --accent: #8b5a2b;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+.custom-navbar {
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 1rem 0;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark) !important;
+}
+
+.custom-navbar .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--accent) !important;
+}
+
+.custom-navbar .navbar-toggler {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.custom-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(139, 90, 43, 0.25);
+}
+
+.banner-section {
+    background-color: var(--bg-card);
+    padding: 8rem 0 4rem;
+}
+
+.banner-section .subtitle {
+    color: var(--text-gray);
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+.banner-title {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+}
+
+.banner-text {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.banner-img {
+    max-width: 250px;
+}
+
+.btn-custom {
+    background-color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.menu-card {
+    background-color: var(--bg-card);
+    border-radius: 15px !important;
+    transition: transform 0.3s;
+    scroll-margin-top: 6.5rem;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(139, 90, 43, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-wrapper i {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.price {
+    color: var(--text-dark);
+}
+
+.btn-like {
+    background: transparent;
+    border: 1px solid var(--text-gray);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-like:hover {
+    background: rgba(139, 90, 43, 0.08);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-like.liked {
+    color: red;
+    border-color: red;
+}

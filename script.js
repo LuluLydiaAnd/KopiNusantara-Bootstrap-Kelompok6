@@ -61,6 +61,12 @@ $('#contactForm').on('submit', function(e) {
     this.reset();
 });
 
-$('#closePopup').on('click', function() {
+$('#contactForm'),on('submit', function(e) {
+    e.preventDefault();
+    $('#successPopup').addClass('show');
+    this.reset();
+});
+
+$('#closePopup').on('click', function(){
     $('#successPopup').removeClass('show');
 });

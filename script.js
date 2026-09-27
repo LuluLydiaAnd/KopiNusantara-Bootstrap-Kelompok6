@@ -14,10 +14,12 @@ $(document).ready(function() {
     // tandai link aktif mengikuti posisi scroll
     $(window).scroll(function() {
         const scrollPos = $(window).scrollTop() + 120;
+
         $('section[id]').each(function() {
             const top = $(this).offset().top;
             const bottom = top + $(this).outerHeight();
             const id = $(this).attr('id');
+
             if (scrollPos >= top && scrollPos < bottom) {
                 $('.navbar-nav .nav-link').removeClass('active');
                 $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active');
@@ -25,7 +27,7 @@ $(document).ready(function() {
         });
     });
 
-    // fungsi tombol like: menambah/mengurang angka sama ganti icon love
+    // fungsi tombol like: menambah/mengurang angka dan mengganti icon love
     $('.btn-like').click(function(e) {
         e.preventDefault();
 
@@ -43,26 +45,11 @@ $(document).ready(function() {
             $btn.addClass('liked');
             $countSpan.text(currentCount + 1);
             $btn.find('i').removeClass('bx-heart').addClass('bxs-heart');
+
             // animasi kedip saat klik like
             $btn.find('i').fadeOut(100).fadeIn(100);
         }
     });
 
-    $(document).ready(function () {
-
-    $('.faq-question').click(function () {
-
-        let target = $(this).attr('data-bs-target');
-        let answer = $(target);
-
-        $('.accordion-collapse').not(answer).slideUp(300);
-        $('.faq-question').not(this).addClass('collapsed');
-
-        answer.slideToggle(300);
-        $(this).toggleClass('collapsed');
-
-    });
-
 });
 
-});

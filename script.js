@@ -48,4 +48,21 @@ $(document).ready(function() {
         }
     });
 
+    $(document).ready(function () {
+
+    $('.faq-question').click(function () {
+
+        let target = $(this).attr('data-bs-target');
+        let answer = $(target);
+
+        $('.accordion-collapse').not(answer).slideUp(300);
+        $('.faq-question').not(this).addClass('collapsed');
+
+        answer.slideToggle(300);
+        $(this).toggleClass('collapsed');
+
+    });
+
+});
+
 });
